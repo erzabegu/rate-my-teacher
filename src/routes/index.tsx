@@ -1,6 +1,6 @@
 import React from "react";
-import { Outlet, useRoutes } from "react-router-dom";
 import Login from "../components/pages/Login";
+import { Outlet, useRoutes } from "react-router-dom";
 
 const Routing = () => {
     const routes = [
