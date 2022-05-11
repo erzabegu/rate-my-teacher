@@ -1,0 +1,8 @@
+.defaultInput {
+    background-color: transparent !important;
+    color: white !important;
+
+    &::placeholder {
+        color: white !important;
+    }
+}

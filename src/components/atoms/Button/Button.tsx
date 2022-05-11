@@ -10,8 +10,8 @@ interface Props {
     children: string | number;
 }
 
-const DefaultButton = ({ size, variant, active, disabled, children }: Props) => {
+const MyButton = ({ size, variant, active, disabled, children }: Props) => {
     return <Button size={size} variant={variant} active={true} disabled={true}>{children}</Button>
 }
 
-export default DefaultButton
+export default MyButton
