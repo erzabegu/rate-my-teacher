@@ -1,18 +1,22 @@
-import React from 'react'
+import React, { ReactElement } from 'react'
 import { Card } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom';
+import { Size } from '../../../enums';
+import { ProfessorType } from '../../../types';
+import { MyButton } from '../../atoms';
 
-interface Props {
-    title: string;
-    content: string;
-}
 
-const ProfessorCard = ({ title, content }: Props) => {
+const ProfessorCard = ({ professorId, professorName, schoolId, departmentId }: ProfessorType) => {
+    
+    const navigate = useNavigate();
+
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="holder.js/100px180" />
             <Card.Body>
-                <Card.Title>{title}</Card.Title>
-                <Card.Text>{content}</Card.Text>
+                <Card.Title>{professorName}</Card.Title>
+                <Card.Text>{professorName}</Card.Text>
+                <MyButton size={Size.SM} title={'click'} onClick={() => navigate(`/professor-details/${professorId}`)} />
             </Card.Body>
         </Card>
     )

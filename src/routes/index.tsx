@@ -1,17 +1,28 @@
-import Login from "../components/pages/Login";
 import { Outlet, useRoutes } from "react-router-dom";
-import { LandingPage } from "../components/pages";
+import { LandingPage, Login, ProfessorDetails, ProfessorsPage } from "../components/pages";
 
 const Routing = () => {
     const routes = [
         {
-            path: 'login',
-            element: <Login />,
+            path: '*',
+            element: <h1>Not found bro</h1>
         },
         {
             path: '',
             element: <LandingPage />,
         },
+        {
+            path: 'login',
+            element: <Login />,
+        },
+        {
+            path: 'professors',
+            element: <ProfessorsPage />,
+        },
+        {
+            path: 'professor-details/:id',
+            element: <ProfessorDetails />
+        }
     ]
     const routing = useRoutes(routes);
     return <>

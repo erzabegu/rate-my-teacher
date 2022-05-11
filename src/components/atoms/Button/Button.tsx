@@ -1,17 +1,14 @@
 import React from "react";
-import { Button } from "react-bootstrap";
+import { Button, ButtonProps } from "react-bootstrap";
 import { Size } from "../../../enums";
 
-interface Props {
-    size: Size.SM | Size.LG;
-    variant?: string;
-    active?: boolean;
-    disabled?: boolean;
-    children: string | number;
+
+interface Props extends ButtonProps {
+    title: string;
 }
 
-const MyButton = ({ size, variant, active, disabled, children }: Props) => {
-    return <Button size={size} variant={variant} active={true} disabled={true}>{children}</Button>
+const MyButton = ({ title, ...props }: Props) => {
+    return <Button {...props}>{title}</Button>
 }
 
 export default MyButton

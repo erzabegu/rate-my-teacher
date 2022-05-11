@@ -1,6 +1,4 @@
 import React from 'react'
-import { Container, Row } from 'react-bootstrap'
-import { DefaultInput } from '../../atoms'
 import { SearchBox, TopRatedContainer } from '../../organisms'
 import './style.scss'
 

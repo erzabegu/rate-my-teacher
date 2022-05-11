@@ -1,3 +1,6 @@
 export { MyButton } from './Button'
 export { DefaultImage } from './Image'
 export { DefaultInput } from './Input'
+export { SelectInput } from './SelectInput'
+export { RatingProgressBar } from './RatingProgressBar'
+export { Label } from './Label'

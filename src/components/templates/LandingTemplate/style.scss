@@ -2,7 +2,9 @@
     background: linear-gradient(320deg, #f27121, #e94057, #8a2387);
     min-height: 100vh;
     position: relative;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
 
     .searchWrapper {
         background: rgba(255, 255, 255, 0.19);
