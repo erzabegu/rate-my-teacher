@@ -6,9 +6,11 @@ interface Props {
     fluid?: boolean;
     rounded?: boolean;
     roundedCircle?: boolean;
+    className?: string;
 }
-export const DefaultImage = ({ src, fluid, rounded, roundedCircle }: Props) => {
-    return <Image src={src} fluid={fluid} rounded={rounded} roundedCircle={roundedCircle} />
+
+export const DefaultImage = (props: Props) => {
+    return <Image {...props} />
 }
 
 export default DefaultImage
