@@ -1,4 +1,3 @@
-import React from 'react'
 import { ProgressBar, ProgressBarProps } from 'react-bootstrap'
 
 interface Props extends ProgressBarProps { }

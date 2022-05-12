@@ -1,1 +1,1 @@
-export { default as ProfessorPage } from './ProfessorTemplate'
+export { default as ProfessorTemplate } from './ProfessorTemplate'

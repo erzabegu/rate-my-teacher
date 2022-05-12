@@ -1,5 +1,5 @@
 import { Outlet, useRoutes } from "react-router-dom";
-import { LandingPage, Login, ProfessorDetails, ProfessorsPage } from "../components/pages";
+import { LandingPage, Login, ProfessorDetails, ProfessorsPage, RatingPage } from "../components/pages";
 
 const Routing = () => {
     const routes = [
@@ -22,6 +22,10 @@ const Routing = () => {
         {
             path: 'professor-details/:id',
             element: <ProfessorDetails />
+        },
+        {
+            path: 'rating',
+            element: <RatingPage />
         }
     ]
     const routing = useRoutes(routes);

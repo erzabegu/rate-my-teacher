@@ -7,7 +7,7 @@ import { MyButton } from '../../atoms';
 
 
 const ProfessorCard = ({ professorId, professorName, schoolId, departmentId }: ProfessorType) => {
-    
+
     const navigate = useNavigate();
 
     return (

@@ -6,6 +6,7 @@ import { ProfessorCard } from '../../molecules'
 interface Props {
     professorsList: Array<ProfessorType>,
 }
+
 const ProfessorsList = ({ professorsList }: Props) => {
     return (
         <Col className="mt-5">

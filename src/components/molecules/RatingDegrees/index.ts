@@ -1,0 +1,1 @@
+export { default as RatingDegrees } from './RatingDegrees'
