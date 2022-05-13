@@ -1,5 +1,5 @@
 import { Outlet, useRoutes } from "react-router-dom";
-import { LandingPage, Login, ProfessorDetails, ProfessorsPage, RatingPage } from "../components/pages";
+import { LandingPage, Login, ProfessorDetails, ProfessorsPage, RatingPage, UserProfile } from "../components/pages";
 
 const Routing = () => {
     const routes = [
@@ -26,6 +26,10 @@ const Routing = () => {
         {
             path: 'rating',
             element: <RatingPage />
+        },
+        {
+            path: 'user-profile',
+            element: <UserProfile />
         }
     ]
     const routing = useRoutes(routes);

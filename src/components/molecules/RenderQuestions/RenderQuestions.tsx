@@ -3,8 +3,9 @@ import { Col, Row } from 'react-bootstrap'
 import { QuestionEnum } from '../../../enums';
 import { QuestionType } from '../../../types';
 import { CheckInputs, DefaultInput, Question } from '../../atoms';
+import { RatingStars } from '../../atoms/RatingStars';
 import { RenderCheckInputs } from '../RenderCheckInputs';
-
+import { App, ArrowRight, BalloonHeartFill } from 'react-bootstrap-icons';
 
 
 const RenderQuestions = ({ question, questionType, options }: QuestionType) => {
@@ -12,14 +13,16 @@ const RenderQuestions = ({ question, questionType, options }: QuestionType) => {
         text: ReactElement;
         radio: ReactElement;
         rating: ReactElement;
-        checkbox: ReactElement
+        checkbox: ReactElement;
+        textarea: ReactElement;
     }
 
     const questionToRender: Questions = {
         [QuestionEnum.TEXT]: <DefaultInput type={'textarea'} placeholder={"input type text"} />,
-        [QuestionEnum.RADIO]: <RenderCheckInputs type={QuestionEnum.RADIO} options={options} />,
-        [QuestionEnum.RATING]: <DefaultInput placeholder={"input type rating stars"} />,
-        [QuestionEnum.CHECKBOX]: <RenderCheckInputs type={QuestionEnum.CHECKBOX} options={options} />
+        [QuestionEnum.RADIO]: <RenderCheckInputs type={'radio'} options={options} />,
+        [QuestionEnum.CHECKBOX]: <RenderCheckInputs type={QuestionEnum.CHECKBOX} options={options} />,
+        [QuestionEnum.RATING]: <RatingStars rating={40} fullIcon={<BalloonHeartFill />} emptyIcon={<BalloonHeartFill />} />,
+        [QuestionEnum.TEXTAREA]: <DefaultInput as={'textarea'} />,
     }
 
     return <>

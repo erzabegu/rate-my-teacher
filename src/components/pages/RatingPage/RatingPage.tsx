@@ -24,6 +24,11 @@ const RatingPage = () => {
         questionId: 4,
         question: "third question",
         questionType: "rating",
+    },
+    {
+        questionId: 5,
+        question: "fifth question",
+        questionType: "textarea",
     }]
     return <RatingTemplate listOfQuestions={listOfQuestions} />
 }
