@@ -1,4 +1,5 @@
 import React from 'react'
+import { Container } from 'react-bootstrap'
 import { QuestionType } from '../../../types'
 import QuestionList from '../../organisms/QuestionsList/QuestionsList'
 
@@ -7,7 +8,9 @@ interface Props {
 }
 
 const RatingTemplate = ({ listOfQuestions }: Props) => {
-    return <div><QuestionList listOfQuestions={listOfQuestions} /></div>
+    return <Container>
+        <QuestionList listOfQuestions={listOfQuestions} />
+    </Container>
 
 }
 

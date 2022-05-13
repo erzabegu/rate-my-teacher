@@ -1,14 +1,13 @@
-import React from 'react'
 import { QuestionType } from '../../../types/QuestionType';
-import { Ask } from '../../molecules/Ask';
+import { RenderQuestions } from '../../molecules/RenderQuestions';
 interface Props {
     listOfQuestions: Array<QuestionType>;
 }
 
-const QuestionList = ({ listOfQuestions }: Props) => {
+const QuestionsList = ({ listOfQuestions }: Props) => {
     return (
-        <div>{listOfQuestions.map((question) => <Ask {...question} />)}</div>
+        <div>{listOfQuestions.map((question) => <RenderQuestions {...question} />)}</div>
     )
 }
 
-export default QuestionList
+export default QuestionsList
