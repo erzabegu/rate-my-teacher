@@ -3,4 +3,5 @@ export enum QuestionEnum {
     RADIO = "radio",
     CHECKBOX = "checkbox",
     RATING = "rating",
+    TEXTAREA = "textarea",
 }
