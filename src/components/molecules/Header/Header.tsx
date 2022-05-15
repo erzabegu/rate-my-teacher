@@ -9,8 +9,8 @@ const Header = () => {
                 <DefaultImage src={'https://www.axians.com/app/uploads/sites/11/2020/08/logo-axians.png'} />
             </Col>
             <Col>
-                <MyButton title='SugnUp' />
-                <MyButton title='SignIn' />
+                <MyButton title='Sign Up' />
+                <MyButton title='Sign In' />
             </Col>
         </Row>
     </Container>
