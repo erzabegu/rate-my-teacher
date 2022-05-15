@@ -1,19 +1,32 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import { DefaultImage, MyButton } from '../../atoms'
+import { DefaultImage, MyButton, Avatar } from '../../atoms'
 
-const Header = () => {
-    return <Container fluid>
-        <Row>
-            <Col className="justify-content-lg-space-between">
-                <DefaultImage src={'https://www.axians.com/app/uploads/sites/11/2020/08/logo-axians.png'} />
+import { Container, Row, Col } from 'react-bootstrap'
+import { Person } from 'react-bootstrap-icons'
+import './style.scss'
+
+import Hat from '../../../assets/images/hat.png'
+
+interface Props {
+    isLoggedIn?: boolean;
+}
+
+const Header = ({ isLoggedIn }: Props) => {
+    return <Container >
+        <Row className='pt-2 pb-1' >
+            <Col xs={7} md={9} xl={10}>
+                <DefaultImage height={30} width={50} src={Hat} />
+                <span style={{ paddingLeft: '10px' }}>Rate Teacher</span>
             </Col>
-            <Col>
-                <MyButton title='Sign Up' />
-                <MyButton title='Sign In' />
+            <Col xs={5} md={3} xl={2} className="align-items-center">
+                {!isLoggedIn ? <>
+                    <Person />
+                    <MyButton size={'sm'} className="loginButtonStyle" title='Login' />
+                    <MyButton size={'sm'} className="registerButtonStyle" title='Register' />
+                </>
+                    : <div className='styledAvatar'><Avatar name='erza' /></div>}
             </Col>
         </Row>
-    </Container>
+    </Container >
 }
 
 export default Header

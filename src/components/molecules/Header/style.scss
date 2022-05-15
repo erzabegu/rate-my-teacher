@@ -1,0 +1,23 @@
+.loginButtonStyle {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    color: black !important;
+    border: none !important;
+    border-right: 1px solid grey !important;
+
+    &:focus {
+        color: red;
+    }
+}
+
+.registerButtonStyle {
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    color: black !important;
+    border: none !important;
+}
+
+.styledAvatar {
+    display: flex;
+    justify-content: flex-end;
+}
