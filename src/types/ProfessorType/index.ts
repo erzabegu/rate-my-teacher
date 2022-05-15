@@ -3,4 +3,5 @@ export interface ProfessorType {
     professorName: string;
     schoolId?: number;
     departmentId?: number;
+    ratingDegree?: number;
 }

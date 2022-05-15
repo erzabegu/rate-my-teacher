@@ -1,5 +1,6 @@
 import { Outlet, useRoutes } from "react-router-dom";
 import { LandingPage, Login, ProfessorDetails, ProfessorsPage, RatingPage, UserProfile } from "../components/pages";
+import { AccountDetails, SavedProfessors, UserRatings } from "../components/templates";
 
 const Routing = () => {
     const routes = [
@@ -29,7 +30,12 @@ const Routing = () => {
         },
         {
             path: 'user-profile',
-            element: <UserProfile />
+            element: <UserProfile />,
+            children: [
+                { path: '', element: <AccountDetails /> },
+                { path: 'userRating', element: <UserRatings /> },
+                { path: 'savedProfessors', element: <SavedProfessors /> }
+            ]
         }
     ]
     const routing = useRoutes(routes);

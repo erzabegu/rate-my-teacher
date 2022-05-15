@@ -1,0 +1,1 @@
+export { default as SavedProfessors } from './SavedProfessors'
