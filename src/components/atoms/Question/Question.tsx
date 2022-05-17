@@ -5,9 +5,8 @@ interface Props {
 }
 
 const Question = ({ question }: Props) => {
-    return (
-        <div>{question}</div>
-    )
+    return <div>{question}</div>
+
 }
 
 export default Question

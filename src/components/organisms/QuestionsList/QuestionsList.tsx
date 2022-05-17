@@ -7,8 +7,8 @@ interface Props {
 
 const QuestionsList = ({ listOfQuestions }: Props) => {
     return (<>
-        <div>{listOfQuestions.map((question) => <RenderQuestions {...question} />)}</div>
-        <div><MyButton title='submit' /></div>
+        {listOfQuestions.map((question) => <RenderQuestions {...question} />)}
+        {/* <div><MyButton title='submit' /></div> */}
     </>
     )
 }

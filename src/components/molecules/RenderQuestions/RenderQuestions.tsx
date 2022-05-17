@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { Col, Row } from 'react-bootstrap'
+import { Card, Col, Row } from 'react-bootstrap'
 import { QuestionEnum } from '../../../enums';
 import { QuestionType } from '../../../types';
 import { CheckInputs, DefaultInput, Question } from '../../atoms';
@@ -26,9 +26,9 @@ const RenderQuestions = ({ question, questionType, options }: QuestionType) => {
     }
 
     return <>
-        <Row>
-            <Col><Question question={question} /></Col>
-            <Col>{questionToRender[questionType as keyof Questions]}</Col>
+        <Row className='d-flex flex-column mt-3'>
+            <Col className='mx-auto pt-1 pb-1' lg={8}><Question question={question} /></Col>
+            <Col className='mx-auto pt-1 pb-1' lg={8}>{questionToRender[questionType as keyof Questions]}</Col>
         </Row>
     </>
 }
