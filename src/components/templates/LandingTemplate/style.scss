@@ -1,5 +1,11 @@
 .landingTemplateContainer {
-    background: linear-gradient(0deg, rgba(35, 66, 98, 1) 0%, rgb(171, 224, 248) 100%);
+    background-image: url('../../../assets/images/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom-left-radius: 0% 10%;
+    height: 500px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
     position: relative;
     display: flex;
     flex-direction: column;

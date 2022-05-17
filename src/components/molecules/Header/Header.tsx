@@ -12,7 +12,7 @@ interface Props {
 
 const Header = ({ isLoggedIn }: Props) => {
     return <Container >
-        <Row className='pt-2 pb-1' >
+        <Row className='pt-2 pb-1 mt-2' >
             <Col xs={7} md={9} xl={10}>
                 <DefaultImage height={30} width={50} src={Hat} />
                 <span style={{ paddingLeft: '10px' }}>Rate Teacher</span>
