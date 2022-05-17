@@ -8,13 +8,16 @@ import './style.scss'
 const SearchBox = () => {
     return (
         <Container>
-            <Row>
-                <TextInput placeholder='Search for Professor/School' />
-                <Col>
+            <Row className='justify-content-center mt-5 mb-5 px-5' lg={11} >
+                <Col className={'d-flex flex-column align-self-center ml-5'}>
+                    <h5> Find a proffesor at University</h5>
+                    <TextInput placeholder='Search for Professor/School' />
+                </Col>
+                <Col className={'d-flex justify-content-center'}>
                     <DefaultImage className={'professorImage'} src={Professor} fluid />
                 </Col>
             </Row>
-        </Container>
+        </Container >
     )
 }
 

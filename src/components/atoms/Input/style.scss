@@ -1,8 +1,9 @@
 .defaultInput {
     background-color: transparent !important;
-    color: rgb(142, 83, 83) !important;
+    color: white !important;
+    border: 1px solid black !important;
 
     &::placeholder {
-        color: rgb(171, 82, 82) !important;
+        color: white !important;
     }
 }

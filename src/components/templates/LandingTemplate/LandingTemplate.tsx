@@ -1,20 +1,23 @@
 import React from 'react'
-import { Header } from '../../molecules'
-import { SearchBox, TopRatedContainer } from '../../organisms'
+import { Container } from 'react-bootstrap'
+import { StatisticsType } from '../../../types'
+import { Header, StatisticsBox } from '../../molecules'
+import { SearchBox, StatisticsWrapper } from '../../organisms'
 import './style.scss'
 
-const LandingTemplate = () => {
+interface Props {
+    statistics: Array<StatisticsType>;
+}
+
+const LandingTemplate = ({ statistics }: Props) => {
     return (<>
         <Header />
         <div className="landingTemplateContainer">
-            <span style={{ position: 'absolute', top: 0, left: 0, zIndex: 1 }}>Rate Me</span>
-            <div className='searchWrapper'>
-                <SearchBox />
-            </div>
-            <div>
-                <TopRatedContainer />
-            </div>
+            <SearchBox />
         </div>
+        <Container className='mt-5'>
+            <StatisticsWrapper statistics={statistics}></StatisticsWrapper>
+        </Container>
     </>
     )
 }
