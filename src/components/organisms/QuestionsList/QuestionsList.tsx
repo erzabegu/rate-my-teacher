@@ -1,5 +1,4 @@
 import { QuestionType } from '../../../types/QuestionType';
-import { MyButton } from '../../atoms';
 import { RenderQuestions } from '../../molecules/RenderQuestions';
 interface Props {
     listOfQuestions: Array<QuestionType>;

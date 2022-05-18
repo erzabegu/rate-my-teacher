@@ -27,8 +27,10 @@ const RenderQuestions = ({ question, questionType, options }: QuestionType) => {
 
     return <>
         <Row className='d-flex flex-column mt-3'>
-            <Col className='mx-auto pt-1 pb-1' lg={8}><Question question={question} /></Col>
-            <Col className='mx-auto pt-1 pb-1' lg={8}>{questionToRender[questionType as keyof Questions]}</Col>
+            <Card style={{ width: '18rem' }}>
+                <Col className='mx-auto pt-1 pb-1 align-items-start' style={{ textAlign: "left" }} lg={8}><Question question={question} /></Col>
+                <Col className='mx-auto pt-1 pb-1' lg={8}>{questionToRender[questionType as keyof Questions]}</Col>
+            </Card >
         </Row>
     </>
 }
