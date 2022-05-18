@@ -1,14 +1,7 @@
 import React from "react";
-import Image from 'react-bootstrap/Image'
+import Image, { ImageProps } from 'react-bootstrap/Image'
 
-interface Props {
-    src: string;
-    fluid?: boolean;
-    rounded?: boolean;
-    roundedCircle?: boolean;
-    className?: string;
-}
-
+interface Props extends ImageProps { }
 export const DefaultImage = (props: Props) => {
     return <Image {...props} />
 }

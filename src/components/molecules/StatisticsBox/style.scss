@@ -1,0 +1,23 @@
+.statisticsBox {
+    background-color: #F8FAFE !important;
+    border: none !important;
+    text-align: center;
+    padding: 50px;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.35) !important;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        transform: translate(0px, -20px);
+        transition: all 1s;
+    }
+
+    // box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    // backdrop-filter: blur( 5.5px );
+    // -webkit-backdrop-filter: blur( 5.5px );
+    // border-radius: 10px;
+    // border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
