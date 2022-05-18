@@ -5,7 +5,7 @@ interface Props {
     placeholder: string;
 }
 const TextInput = (props: Props) => {
-    return (<Col sm={12} md={6}>
+    return (<Col>
         <DefaultInput type='text' {...props} />
     </Col>)
 }
