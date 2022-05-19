@@ -1,5 +1,4 @@
-import React from 'react'
-import { Container } from 'react-bootstrap'
+import { Container, Col } from 'react-bootstrap'
 import { QuestionType } from '../../../types'
 import QuestionList from '../../organisms/QuestionsList/QuestionsList'
 
@@ -8,10 +7,11 @@ interface Props {
 }
 
 const RatingTemplate = ({ listOfQuestions }: Props) => {
-    return <Container>
-        <QuestionList listOfQuestions={listOfQuestions} />
+    return <Container className='mt-3'>
+        <Col lg={4} className='mx-auto outline-primary'>
+            <QuestionList listOfQuestions={listOfQuestions} />
+        </Col>
     </Container>
-
 }
 
 export default RatingTemplate
