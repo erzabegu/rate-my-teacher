@@ -8,7 +8,7 @@ interface Props {
 
 const RatingTemplate = ({ listOfQuestions }: Props) => {
     return <Container className='mt-3'>
-        <Col xs={4} className="mx-auto">
+        <Col xs={12} md={4} className="mx-auto">
             <QuestionList listOfQuestions={listOfQuestions} />
         </Col>
     </Container>

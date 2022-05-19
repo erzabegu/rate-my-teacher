@@ -7,7 +7,6 @@ interface Props {
 const QuestionsList = ({ listOfQuestions }: Props) => {
     return (<>
         {listOfQuestions.map((question) => <RenderQuestions {...question} />)}
-        {/* <div><MyButton title='submit' /></div> */}
     </>
     )
 }
