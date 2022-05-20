@@ -7,7 +7,8 @@ interface Props {
 }
 
 const RenderCheckInputs = ({ options, type }: Props) => {
-    return <>{options !== undefined && options.map((option) => <CheckInputs  type={type} label={option} />)}</>
+    console.log(type, options, 'type')
+    return <>{options !== undefined && options.map((option) => <CheckInputs type={type} label={option} />)}</>
 }
 
 export default RenderCheckInputs
