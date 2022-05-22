@@ -7,8 +7,8 @@ interface Props {
 
 const SelectInput = ({ options }: Props) => {
     return (
-        <Form.Select aria-label="Default select example">
-            {options.map((option) => <option value={option.value}>{option.name}</option>)}
+        <Form.Select style={{ width: '200px' }}>
+            {options.map((option, index) => <option value={option.value} key={index}>{option.name}</option>)}
         </Form.Select>
     )
 }

@@ -1,14 +1,14 @@
 @import '../../../styles/index.scss';
 
 .landingTemplateContainer {
-    background-image: url('../../../assets/images/wave.svg');
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url('../../../assets/images/new.png');
     background-repeat: no-repeat;
     background-size: cover;
-    border-bottom-left-radius: 0% 10%;
-    height: 500px;
+    height: 90vh;
     color: $primaryColor;
     font-weight: bold;
     position: relative;
     display: flex;
     flex-direction: column;
 }
+
