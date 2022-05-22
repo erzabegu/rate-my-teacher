@@ -9,9 +9,10 @@ import { useNavigate } from 'react-router-dom'
 
 interface Props {
     isLoggedIn?: boolean;
+    isOk?: boolean;
 }
 
-const Header = ({ isLoggedIn }: Props) => {
+const Header = ({ isLoggedIn, isOk }: Props) => {
 
     const navigate = useNavigate()
 
@@ -26,8 +27,7 @@ const Header = ({ isLoggedIn }: Props) => {
                     <Person />
                     <MyButton size={'sm'} className="loginButtonStyle" title='Login' onClick={() => navigate('/login')} />
                     <MyButton size={'sm'} className="registerButtonStyle" title='Register' onClick={() => navigate('/register')} />
-                </>
-                    : <div className='styledAvatar'><Avatar name='erza' /></div>}
+                </> : isOk ? <MyButton size={'sm'} className="registerButtonStyle" title='Register' onClick={() => navigate('/register')} /> : <div className='styledAvatar'><Avatar name='erza' /></div>}
             </Col>
         </Row>
     </Container >
