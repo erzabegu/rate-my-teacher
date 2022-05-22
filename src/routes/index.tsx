@@ -1,5 +1,6 @@
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Outlet, useRoutes } from "react-router-dom";
-import { LandingPage, Login, ProfessorDetails, ProfessorsPage, RatingPage, UserProfile } from "../components/pages";
+import { LandingPage, Login, ProfessorDetails, ProfessorsPage, RatingPage, RegisterPage, UserProfile } from "../components/pages";
 import { AccountDetails, SavedProfessors, UserRatings } from "../components/templates";
 
 const Routing = () => {
@@ -15,6 +16,10 @@ const Routing = () => {
         {
             path: 'login',
             element: <Login />,
+        },
+        {
+            path: 'register',
+            element: <RegisterPage />
         },
         {
             path: 'professors',

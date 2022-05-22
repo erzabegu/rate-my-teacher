@@ -3,9 +3,11 @@ import { DefaultInput } from '../../atoms'
 
 interface Props {
     placeholder: string;
+    style?: any;
+    className?: any;
 }
 const TextInput = (props: Props) => {
-    return (<Col sm={12} md={6}>
+    return (<Col>
         <DefaultInput type='text' {...props} />
     </Col>)
 }

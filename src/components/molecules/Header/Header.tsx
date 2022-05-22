@@ -1,19 +1,36 @@
-import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
-import { DefaultImage, MyButton } from '../../atoms'
+import { DefaultImage, MyButton, Avatar } from '../../atoms'
 
-const Header = () => {
-    return <Container fluid>
-        <Row>
-            <Col className="justify-content-lg-space-between">
-                <DefaultImage src={'https://www.axians.com/app/uploads/sites/11/2020/08/logo-axians.png'} />
+import { Container, Row, Col } from 'react-bootstrap'
+import { MortarboardFill, Person } from 'react-bootstrap-icons'
+import './style.scss'
+
+import Hat from '../../../assets/images/hat.png'
+import { useNavigate } from 'react-router-dom'
+
+interface Props {
+    isLoggedIn?: boolean;
+    isOk?: boolean;
+}
+
+const Header = ({ isLoggedIn, isOk }: Props) => {
+
+    const navigate = useNavigate()
+
+    return <Container >
+        <Row className='pt-2 pb-1 mt-2' >
+            <Col xs={7} md={9} xl={10}>
+                <MortarboardFill color={"#283779"} height={40} width={40} />
+                <span style={{ paddingLeft: '10px' }}>Rate Teacher</span>
             </Col>
-            <Col>
-                <MyButton title='SugnUp' />
-                <MyButton title='SignIn' />
+            <Col xs={5} md={3} xl={2} style={{ textAlign: 'right', color: "#283779" }}>
+                {!isLoggedIn ? <>
+                    <Person />
+                    <MyButton size={'sm'} className="loginButtonStyle" title='Login' onClick={() => navigate('/login')} />
+                    <MyButton size={'sm'} className="registerButtonStyle" title='Register' onClick={() => navigate('/register')} />
+                </> : isOk ? <MyButton size={'sm'} className="registerButtonStyle" title='Register' onClick={() => navigate('/register')} /> : <div className='styledAvatar'><Avatar name='erza' /></div>}
             </Col>
         </Row>
-    </Container>
+    </Container >
 }
 
 export default Header
