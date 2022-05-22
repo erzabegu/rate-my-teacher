@@ -10,7 +10,7 @@ interface Props {
 const DepartmentsList = ({ text, options }: Props) => {
     return (
         <Row>
-            <Col lg={2} mx={'auto'}>
+            <Col mx={'auto'}>
                 <Label text={text} />
             </Col>
             <Col>

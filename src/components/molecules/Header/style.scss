@@ -1,8 +1,11 @@
+@import '../../../styles/index.scss';
+
 .loginButtonStyle {
     background-color: transparent !important;
     border-radius: 0 !important;
-    color: black !important;
+    color: $textColor  !important;
     border: none !important;
+    font-size: 15px !important;
     border-right: 1px solid grey !important;
 
     &:focus {
@@ -13,8 +16,13 @@
 .registerButtonStyle {
     background-color: transparent !important;
     border-radius: 0 !important;
-    color: black !important;
+    color: $textColor  !important;
+    font-size: 15px !important;
     border: none !important;
+
+    &:focus {
+        border: none !important;
+    }
 }
 
 .styledAvatar {

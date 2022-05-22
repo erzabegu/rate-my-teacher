@@ -11,8 +11,8 @@ interface Props {
 
 const LandingTemplate = ({ statistics }: Props) => {
     return (<>
+        <Header />
         <div className="landingTemplateContainer">
-            <Header />
             <SearchBox />
         </div>
         <Container className='mt-5'>

@@ -1,3 +1,4 @@
+import { AnimationOnScroll } from "react-animation-on-scroll";
 import { Outlet, useRoutes } from "react-router-dom";
 import { LandingPage, Login, ProfessorDetails, ProfessorsPage, RatingPage, RegisterPage, UserProfile } from "../components/pages";
 import { AccountDetails, SavedProfessors, UserRatings } from "../components/templates";
