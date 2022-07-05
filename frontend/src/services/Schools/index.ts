@@ -1,0 +1,1 @@
+export { getSchools, modifySchool, deleteSchool, addSchool } from './schoolsService'

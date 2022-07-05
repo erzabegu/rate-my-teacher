@@ -1,0 +1,1 @@
+export { getDepartments } from './departmentServices'

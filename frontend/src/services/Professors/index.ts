@@ -1,0 +1,1 @@
+export { getProfessors, modifyProfessors, deleteProfessors, addProfessors } from './professorsService'
